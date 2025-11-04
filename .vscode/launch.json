@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug with Firefox (Final Attempt)",
+            "type": "firefox",
+            "request": "launch",
+            "reAttach": true,
+            "url": "http://127.0.0.1:5500/01_introApp/index.html", // הכתובת המלאה לאתר
+            "webRoot": "${workspaceFolder}/01_introApp" // הנתיב לתיקיית הקוד שלך
+        }
+    ]
+}
