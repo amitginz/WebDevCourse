@@ -37,7 +37,9 @@ function pageLoaded() {
  */
 function validInput(inputElement) {
     const value_valid = inputElement.value.trim();
-    const isValid = !isNaN(parseFloat(value_valid)) && isFinite(value_valid) && value_valid.length > 0;
+    const isNumeric = !isNaN(parseFloat(value_valid)) && isFinite(value_valid)
+    const isNotEmpty = !isNaN(parseFloat(value_valid)) && isFinite(value_valid) && value_valid.length > 0;
+    const isValid = isNumeric && isNotEmpty;
     // הסרת מחלקות ישנות
     inputElement.classList.remove('is-valid', 'is-invalid');
 
@@ -62,7 +64,7 @@ function calculate() {
     const isNum1Valid = validInput(txt1);
     const isNum2Valid = validInput(txt2);
 
-    // אם אחד מהקלטות אינו תקין, עוצרים את החישוב
+    // אם אחד מהקלטho אינו תקין, עוצרים את החישוב
     if (!isNum1Valid || !isNum2Valid) {
         document.getElementById('lblRes').innerText = "שגיאה: קלט לא מספרי!";
         // אין צורך להמשיך לחישוב או ללוג אם יש שגיאת קלט
@@ -111,7 +113,7 @@ function calculate() {
     // קבלת מצב הצבירה (למשל, מתוך Checkbox)
     const isAppendMode = document.getElementById('appendModeCheckboxId').checked;
 
-    // קריאה לפונקציית הרישום המעודכנת
+    // קריאה לפונקציית ההדפסה שכוללת המעודכנת שכולללת כתיבה לוג ומצב הוספה לטקסט
     print(num1, num2, operation, res, isAppendMode);
 
     // עדכון התווית התוצאה

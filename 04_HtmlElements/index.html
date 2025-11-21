@@ -10,6 +10,7 @@
 
 <body>
     <div class="container mt-4">
+        <!--button of functions we devloped at class-->
         <button onclick="demoNative()">Native Types</button>
         <button id="btn2">Register Click From Code</button>
         <br>
@@ -17,10 +18,12 @@
         <br>
         <table>
             <div class="row align-items-center mb-4">
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-4 mb-2 mb-md-0">
+                    <!-- textbox1 to get number from the user to calculate-->
                     <input id="txt1" type="text" class="form-control form-control-lg" placeholder="מספר ראשון">
                 </div>
-                <div class="col-6 col-md-2">
+                <div class="col-6 col-md-2 mb-2 mb-md-0">
+                    <!-- this div select which opertion to do in the calculator-->
                     <select id="operation-select" class="form-select form-select-lg">
                         <option value="+">+</option>
                         <option value="-">-</option>
@@ -29,20 +32,24 @@
                     </select>
                 </div>
 
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-4 mb-2 mb-md-0">
+                    <!-- textbox2 to get number from the user to calculate-->
                     <input id="txt2" type="text" class="form-control form-control-lg" placeholder="מספר שני">
                 </div>
-                <div class="col-6 col-md-2">
+                <div class="col-6 col-md-2 mb-2 mb-md-0">
+                    <!--equal sign button to calculate acording to the chosen operation-->
                     <button id="btnCalc" class="btn btn-success btn-lg w-100">=</button>
                 </div>
 
                 <div class="col-12 text-center mt-3">
+                    <!-- place to show the result of the calculator-->
                     <h3 id="lblRes" class="display-6 text-primary">0</h3>
                 </div>
 
             </div>
         </table>
         <div class="form-check mt-3 mb-3">
+            <!-- chckbox -add the math equation to the screen or not-->
             <input class="form-check-input" type="checkbox" value="" id="appendModeCheckboxId" checked
                 name="append-mode-toggle">
 
