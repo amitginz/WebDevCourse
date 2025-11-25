@@ -69,7 +69,7 @@ function renderSongs() {
 }
 
 
-
+//delete song from the list of song in the page
 function deleteSong(id) {
     if (confirm('Are you sure?')) {
         // Filter out the song with the matching ID
@@ -91,3 +91,4 @@ function editSong(id) {
     submitBtn.innerHTML = '<i class="fas fa-save"></i> Update';
     submitBtn.classList.replace('btn-success', 'btn-warning');
 }
+
