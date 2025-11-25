@@ -6,7 +6,7 @@ const submitBtn = document.getElementById('submitBtn');
 
 //if not exsist in localStorage get empty array else 
 //get json text and convert it to object json
-let songs = JSON.parse(localStorage.getItem('playlist')) || [];
+let songs = JSON.parse(localStorage.getItem('songs')) || [];
 
 //User click the add Button
 form.addEventListener('submit', (e) => {
@@ -36,7 +36,7 @@ form.addEventListener('submit', (e) => {
 //Save to Local storage and render UI table
 function saveAndRender() {
 
-    localStorage.setItem('playlist', JSON.stringify(songs));
+    localStorage.setItem('songs', JSON.stringify(songs));
 
     //TODO RELOAD UI    
     renderSongs();
@@ -91,4 +91,5 @@ function editSong(id) {
     submitBtn.innerHTML = '<i class="fas fa-save"></i> Update';
     submitBtn.classList.replace('btn-success', 'btn-warning');
 }
+
 
